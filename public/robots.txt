@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hammerhub.com/sitemap-index.xml
+Sitemap: https://www.hammerhub.com/sitemap-index.xml

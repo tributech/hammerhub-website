@@ -6,7 +6,7 @@ import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://hammerhub.com',
+  site: 'https://www.hammerhub.com',
   integrations: [react(), sitemap()],
   vite: {
     plugins: [tailwindcss()],

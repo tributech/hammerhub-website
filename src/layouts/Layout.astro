@@ -9,6 +9,7 @@ const {
   title,
   description = 'HammerHub is the ultimate platform for tabletop gaming. Rankings, tournaments, army lists, and community — all in one place. Currently powering Old World Rankings.',
 } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, 'https://www.hammerhub.com').href;
 ---
 
 <!doctype html>
@@ -24,6 +25,7 @@ const {
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content="Rankings, tournaments, army lists, and community — all in one place." />
+    <link rel="canonical" href={canonicalURL} />
 
     <link rel="preload" href="/images/hammerhub-logo.png" as="image" />
     <link rel="preload" href="/images/hero-bg.jpg" as="image" />
