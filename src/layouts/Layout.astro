@@ -22,9 +22,11 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://www.hammerhub.com').hr
     <meta property="og:title" content={title} />
     <meta property="og:description" content="Rankings, tournaments, army lists, and community — all in one place." />
     <meta property="og:site_name" content="HammerHub" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="https://www.hammerhub.com/images/opengraph.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content="Rankings, tournaments, army lists, and community — all in one place." />
+    <meta name="twitter:image" content="https://www.hammerhub.com/images/opengraph.png" />
     <link rel="canonical" href={canonicalURL} />
 
     <link rel="preload" href="/images/hammerhub-logo.png" as="image" />
