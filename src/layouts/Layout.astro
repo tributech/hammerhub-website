@@ -7,7 +7,7 @@ interface Props {
 const gaId = import.meta.env.PUBLIC_GA_ID;
 const {
   title,
-  description = 'Competitive rankings, pairings & army lists for Warhammer: The Old World, 40K, Age of Sigmar, and more. Currently powering Old World Rankings.',
+  description = 'Host tournaments & manage army lists for Warhammer: The Old World, 40K, Age of Sigmar and more. Native iOS & Android apps. Currently powering Old World Rankings.',
 } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, 'https://www.hammerhub.com').href;
 ---
@@ -20,12 +20,12 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://www.hammerhub.com').hr
     <meta name="description" content={description} />
     <meta name="theme-color" content="#1a1a2e" />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content="Live rankings, pairings &amp; army lists for Warhammer: The Old World, 40K, Age of Sigmar and more. Built for competitive players." />
+    <meta property="og:description" content="Tournament hosting, army lists &amp; live rankings for Warhammer: The Old World, 40K, Age of Sigmar and more. Native iOS &amp; Android." />
     <meta property="og:site_name" content="HammerHub" />
     <meta property="og:image" content="https://www.hammerhub.com/images/opengraph.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content="Live rankings, pairings &amp; army lists for Warhammer: The Old World, 40K, Age of Sigmar and more. Built for competitive players." />
+    <meta name="twitter:description" content="Tournament hosting, army lists &amp; live rankings for Warhammer: The Old World, 40K, Age of Sigmar and more. Native iOS &amp; Android." />
     <meta name="twitter:image" content="https://www.hammerhub.com/images/opengraph.png" />
     <link rel="canonical" href={canonicalURL} />
 
