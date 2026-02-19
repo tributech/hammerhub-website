@@ -34,18 +34,8 @@
 
 ## SEO
 
-- [ ] Add `public/robots.txt`:
-  ```
-  User-agent: *
-  Allow: /
-
-  Sitemap: https://hammerhub.com/sitemap-index.xml
-  ```
-- [ ] Enable Astro's sitemap integration:
-  ```bash
-  pnpm astro add sitemap
-  ```
-  Then in `astro.config.mjs`, add `sitemap()` to integrations — it will auto-generate `/sitemap-index.xml` at build time.
+- [x] Add `public/robots.txt`
+- [x] Enable Astro's sitemap integration (`@astrojs/sitemap`) — auto-generates `/sitemap-index.xml` at build time
 - [ ] Submit sitemap to [Google Search Console](https://search.google.com/search-console) once domain is live
 - [ ] Submit sitemap to [Bing Webmaster Tools](https://www.bing.com/webmasters)
 - [ ] Add OG image (`/public/og-image.png`, 1200×630px) and wire it up in `Layout.astro`:
@@ -67,7 +57,7 @@
 
 - [ ] Test on mobile (iOS Safari, Android Chrome)
 - [ ] Test email signup form end-to-end on the live URL (not localhost — Netlify Forms only works on deployed site)
-- [ ] Verify all external links open in new tab (`oldworldrankings.com`)
+- [x] Verify all external links open in new tab and pass referrer to `oldworldrankings.com` (`rel="noopener"` only)
 - [ ] Spell-check all copy
 - [ ] Confirm favicons appear correctly in browser tab + iOS home screen bookmark
 
