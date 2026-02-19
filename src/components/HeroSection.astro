@@ -2,12 +2,20 @@
 ---
 
 <section class="relative flex min-h-svh items-center justify-center overflow-hidden px-6">
-  <!-- Hero background image -->
+  <!-- Hero backgrounds — crossfade between the two -->
   <img
+    id="hero-bg-1"
     alt=""
-    class="object-cover"
-    style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+    class="object-cover transition-opacity duration-[2000ms]"
+    style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent;opacity:1"
     src="/images/hero-bg.jpg"
+  />
+  <img
+    id="hero-bg-2"
+    alt=""
+    class="object-cover transition-opacity duration-[2000ms]"
+    style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent;opacity:0"
+    src="/images/hero-bg-2.jpg"
   />
   <!-- Dark overlay -->
   <div class="absolute inset-0 bg-background/85" aria-hidden="true"></div>
@@ -60,3 +68,20 @@
     </div>
   </div>
 </section>
+
+<script>
+  const bg1 = document.getElementById('hero-bg-1') as HTMLElement;
+  const bg2 = document.getElementById('hero-bg-2') as HTMLElement;
+  let showing1 = true;
+
+  setInterval(() => {
+    if (showing1) {
+      bg1.style.opacity = '0';
+      bg2.style.opacity = '1';
+    } else {
+      bg1.style.opacity = '1';
+      bg2.style.opacity = '0';
+    }
+    showing1 = !showing1;
+  }, 6000);
+</script>
