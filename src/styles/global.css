@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  /* HammerHub — mirrors the V0 CSS variable theme */
+  --color-background: #1a1a2e;
+  --color-foreground: #e2e8f0;
+  --color-card: #1e1e35;
+  --color-card-foreground: #e2e8f0;
+  --color-primary: #00c8dc;
+  --color-primary-foreground: #0f0f1a;
+  --color-secondary: #252540;
+  --color-secondary-foreground: #cbd5e1;
+  --color-muted: #1e1e35;
+  --color-muted-foreground: #94a3b8;
+  --color-border: rgba(255, 255, 255, 0.1);
+
+  /* Typography */
+  --font-sans: "Montserrat", system-ui, sans-serif;
+  --font-brand: "Alfa Slab One", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #1a1a2e;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration-line: none;
+}

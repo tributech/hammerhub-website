@@ -1,0 +1,74 @@
+---
+---
+
+<section id="notify" class="border-t border-border bg-card px-6 py-24">
+  <div class="mx-auto max-w-lg text-center">
+    <h2 class="mb-4 text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">Be first to know</h2>
+    <p class="mb-10 text-pretty leading-relaxed text-muted-foreground">
+      Drop your email and we will let you know as soon as HammerHub launches with new game systems.
+    </p>
+
+    <!-- Hidden form for Netlify build-time detection -->
+    <form name="notify" netlify netlify-honeypot="bot-field" hidden>
+      <input type="email" name="email" />
+    </form>
+
+    <!-- Visible form -->
+    <form
+      id="notify-form"
+      name="notify"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="form-name" value="notify" />
+      <div class="hidden">
+        <label>Don't fill this out: <input name="bot-field" /></label>
+      </div>
+
+      <div id="form-inputs" class="flex flex-col gap-3 sm:flex-row">
+        <label for="notify-email" class="sr-only">Email address</label>
+        <input
+          id="notify-email"
+          type="email"
+          name="email"
+          required
+          placeholder="your@email.com"
+          class="h-12 flex-1 rounded-lg border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none"
+        />
+        <button
+          type="submit"
+          class="h-12 cursor-pointer rounded-lg bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-[0_0_30px_rgba(0,200,220,0.5),0_0_60px_rgba(0,200,220,0.2)] transition-all hover:bg-primary/85 hover:shadow-[0_0_40px_rgba(0,200,220,0.7),0_0_80px_rgba(0,200,220,0.3)]"
+        >
+          Notify me
+        </button>
+      </div>
+
+      <div id="form-success" class="hidden py-3 text-sm font-medium text-primary">
+        You're on the list! We'll be in touch.
+      </div>
+    </form>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('notify-form') as HTMLFormElement | null;
+  const inputs = document.getElementById('form-inputs');
+  const success = document.getElementById('form-success');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data as unknown as Record<string, string>).toString(),
+      });
+      inputs?.classList.add('hidden');
+      success?.classList.remove('hidden');
+    } catch {
+      form.submit();
+    }
+  });
+</script>

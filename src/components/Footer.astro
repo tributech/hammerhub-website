@@ -1,0 +1,17 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-border px-6 py-10">
+  <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 md:flex-row">
+    <div class="flex items-center gap-3">
+      <img src="/images/hammerhub-logo.png" alt="HammerHub" class="h-8 w-8 invert" />
+      <span class="text-foreground" style="font-family: var(--font-brand)">HAMMERHUB</span>
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="/privacy" class="text-sm text-muted-foreground transition-colors hover:text-foreground">Privacy &amp; Disclaimers</a>
+      <span class="text-sm text-muted-foreground">hammerhub.com</span>
+    </div>
+    <p class="text-xs text-muted-foreground/60">&copy; {year} HammerHub. All rights reserved.</p>
+  </div>
+</footer>

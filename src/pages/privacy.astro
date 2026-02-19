@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Privacy & Disclaimers — HammerHub"
+  description="Privacy policy and disclaimers for HammerHub."
+>
+  <Nav />
+  <main class="pt-24 pb-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold text-white mb-8">Privacy &amp; Disclaimers</h1>
+
+      <div class="prose prose-invert max-w-none text-hh-text-muted leading-relaxed space-y-6">
+        <section>
+          <h2 class="text-xl font-semibold text-white mb-3">Privacy Policy</h2>
+          <p>
+            HammerHub collects email addresses only when you voluntarily sign up to our launch notification list.
+            We use your email solely to notify you of HammerHub's launch and related updates.
+            We do not sell or share your email with third parties.
+          </p>
+          <p>
+            You can unsubscribe at any time by clicking the unsubscribe link in any email we send you,
+            or by contacting us at <a href="mailto:hello@hammerhub.com" class="text-hh-cyan hover:underline">hello@hammerhub.com</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-white mb-3">Cookies</h2>
+          <p>
+            This site uses no tracking cookies. Analytics, if enabled, are handled via Google Analytics
+            to understand general traffic patterns.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-white mb-3">Disclaimers</h2>
+          <p>
+            HammerHub is an independent platform and is not affiliated with, endorsed by, or in any way
+            officially connected with Games Workshop, Wizards of the Coast, Fantasy Flight Games, Para Bellum
+            Wargames, Mantic Games, or any other game publisher referenced on this site.
+          </p>
+          <p>
+            All game names, logos, and related marks referenced on this site are the property of their
+            respective owners and are used for identification purposes only.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-white mb-3">Contact</h2>
+          <p>
+            For any privacy-related queries, contact us at{' '}
+            <a href="mailto:hello@hammerhub.com" class="text-hh-cyan hover:underline">hello@hammerhub.com</a>.
+          </p>
+        </section>
+
+        <p class="text-hh-text-dim text-sm">Last updated: February 2026</p>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>
